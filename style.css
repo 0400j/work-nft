@@ -27,7 +27,7 @@ ul {
 .menu-section .menu-list {
   width : 50%;
 }
-.menu-section .menu-list ul {
+.menu-section .menu-list > ul {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -37,19 +37,39 @@ ul {
   color: #222222;
   font-weight: 600;
 }
-.menu-section .menu-list li {
+.menu-section .menu-list > ul > li {
+  /* float: left; */
   list-style : none;
   display: flex;
   align-items: center;
-  padding-right: 0.8rem;
+  padding-right: 1.1rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.menu-section .menu-list > ul > li > ul {
+  width:130px;
+  display:none;
+  position: absolute;
+  font-size:14px;
+  background: skyblue;
+  top: 100%;
+}
+.menu-section .menu-list > ul > li:hover > ul {
+  display: block;
+  /* float: left;
+  width: 140px;
+  background: skyblue;
+  position: absolute;
+  top: 90%;
+  right: 30%; */
 }
 .menu-section .menu-list li img {
-  width: 0.5rem;
-  padding-top: 0.4rem;
-  padding-left: 0.4rem;
+  width: 1.6rem;
+  padding-top: 0.7rem;
+  transform : scale(0.3);
 }
 .menu-section .menu-list span {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .menu-section .etc {
   display: flex;
@@ -255,6 +275,7 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
+  color: deepskyblue;
 }
 
 .hot-products-section .products-section .products-list .products-people .products-people-list {
@@ -262,7 +283,9 @@ ul {
   align-items: center;
 }
 .hot-products-section .products-section .products-list .products-people .products-people-list .more-people{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: dodgerblue;
   height: 1.5rem;
   width: 1.5rem;
@@ -271,7 +294,6 @@ ul {
   font-size: 0.7rem;
   border: 1px solid white;
   margin-left: -0.7rem;
-  text-align: center;
 }
 .hot-products-section .products-section .products-list .products-people .products-people-list img{
   width: 1.5rem;
@@ -294,7 +316,7 @@ ul {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  top: 70%;
+  top: 60%;
   text-align: center;
   font-size: 0.8rem;
   color: white;
@@ -493,11 +515,11 @@ ul {
 }
 
 .footer-section .footer .company-intro {
-  width:20%;
+  width:25%;
 }
 .footer-section .footer .company-intro .company-intro-text{
-  margin : 2rem 0;
-  font-size: 0.8rem;
+  margin : 1rem 0;
+  font-size: 0.9rem;
 }
 .footer-section .footer .company-intro .company-sns ul {
   display: flex;
@@ -514,7 +536,7 @@ ul {
 }
 .footer-section .footer .information-section {
   display: flex;
-  width : 66%;
+  width : 73%;
 }
 .footer-section .footer .information-section .resources-wrapper,
 .footer-section .footer .information-section .marketplace-wrapper {
@@ -523,25 +545,26 @@ ul {
 
 .footer-section .footer .information-section .resources-wrapper .resources ul,
 .footer-section .footer .information-section .marketplace-wrapper .marketplace ul{
-  color: gray;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin-top: 1rem;
+  font-weight: 500;
 }
 .footer-section .footer .information-section .resources-wrapper .resources ul li,
 .footer-section .footer .information-section .marketplace-wrapper .marketplace ul li{
   padding : 0.4rem 0;
   list-style: none;
 }
-.footer-section .footer .information-section .message-wrapper,
-.footer-section .footer .information-section .resources-wrapper,
-.footer-section .footer .information-section .marketplace-wrapper{
-  font-weight: 900;
+.footer-section .footer .information-section .message-wrapper span,
+.footer-section .footer .information-section .resources-wrapper span,
+.footer-section .footer .information-section .marketplace-wrapper span{
+  font-weight: 100;
+  letter-spacing: 0.1rem;
   width: 33%;
+  color: gray;
 }
 .footer-section .footer .information-section .message-wrapper .message{
-  color: gray;
   margin-top: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   line-height: 1.4rem;
 }
 .footer-section .footer .information-section .message-wrapper .message .send{
@@ -563,7 +586,7 @@ ul {
 .footer-section .footer .information-section .message-wrapper .message textarea::placeholder,
 .footer-section .footer .information-section .message-wrapper .message input::placeholder{
   color:gray;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial;
 }
 .footer-section .footer .information-section .message-wrapper .message .submit{
   width: 30%;
@@ -734,11 +757,11 @@ ul {
   }
   .footer-section .footer .information-section .resources-wrapper,
   .footer-section .footer .information-section .marketplace-wrapper {
-    width: 49%;
+    width: 70%;
     display: inline-block;
   }
   .footer-section .footer .information-section .message-wrapper {
-    width: 47%;
+    width: 70%;
   }
   .bottom-section .bottom {
     font-size: 0.7rem;
