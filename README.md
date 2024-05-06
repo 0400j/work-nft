@@ -1,3 +1,2 @@
 # work-nft
-main : 1씀
-amin : 2씀
+ybm에서 왔어요
