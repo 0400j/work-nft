@@ -18,3 +18,6 @@ ybm에서 왔어요
 
 2 : sibling 탄생
 3 : sibling 업적
+
+
+main은 나아갑니다
